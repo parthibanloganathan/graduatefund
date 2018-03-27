@@ -1,0 +1,14 @@
+a {
+  color: $dark-gray;
+  text-decoration: none !important;
+  border-bottom: 2px solid $dark-gray;
+  &:hover {
+    color: $dark-gray;
+  }
+}
+
+
+p {
+  font-weight: 300;
+  font-style: normal;
+}

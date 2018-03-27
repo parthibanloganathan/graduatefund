@@ -1,0 +1,106 @@
+$landing-h2-mobile: 25px;
+$landing-h2-tablet: 24px;
+$landing-h2-desktop: 28px;
+$landing-h3-mobile: 35px;
+$landing-h3-tablet: 46px;
+$landing-h3-desktop: 62px;
+$landing-h3-large: 75px;
+
+.landing-container {
+
+
+    .landing-content {
+      max-width: 930px;
+      position: relative;
+      margin: 0 auto;
+      min-height: 450px;
+
+
+      @media (min-width: $breakpoint-small) {
+        min-height: 600px;
+      }
+
+      @media (min-height: 800px) {
+        height: 95vh;
+      }
+
+      @media (min-width: $breakpoint-medium) {
+        margin: 0 auto 0 0;
+      }
+
+      h2 {
+        font-size: $landing-h2-mobile;
+        font-weight: 300;
+        font-style: normal;
+        vertical-align: bottom;
+        margin-top: 20px;
+
+        @media (min-width: $breakpoint-small) {
+          font-size: $landing-h2-tablet;
+        }
+
+        @media (min-width: $breakpoint-medium) {
+          font-size: $landing-h2-desktop;
+        }
+      }
+
+      h3 {
+        font-size: $landing-h3-mobile;
+        font-weight: 700;
+        color: $brand-dark;
+
+
+        @media (min-width: $breakpoint-small) {
+          font-size: $landing-h3-tablet;
+        }
+
+        @media (min-width: $breakpoint-medium) {
+          font-size: $landing-h3-desktop;
+        }
+
+        @media (min-width: $breakpoint-large) {
+          font-size: $landing-h3-large;
+        }
+      }
+
+      .navigation {
+        width: 100%;
+        padding-top: 50px;
+        position: relative;
+        min-height: 200px;
+
+        @media (min-width: $breakpoint-small) {
+          min-height: 250px;
+          height: 30vh;
+        }
+
+        .logo {
+          width: 35%;
+          max-width: 130px;
+          min-width: 75px;
+
+          @media (min-width: $breakpoint-small) {
+            width: 25%;  
+            display: inline-block;
+            vertical-align: middle;
+          }
+        }
+
+        .navigation-links {
+          list-style-type: none;
+          display: inline-block;
+          li {
+            cursor: pointer;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 16px;
+            color: $brand-dark;
+            display: inline-block;
+            margin: 0 10px;
+          }
+        }
+      }
+
+    }
+}
+

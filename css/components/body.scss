@@ -1,0 +1,21 @@
+body {
+  font-family: 'Nunito Sans', "Garamond",sans-serif;
+  font-size: $body-font-size * $font-mobile-multiplier;
+  background: $white;
+  height: 100%;
+  width: 100%;
+
+  @media (min-width: $breakpoint-small) {
+    font-size: $body-font-size * $font-small-multiplier;
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    font-size: $body-font-size;
+  }
+
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    line-height: 1.3;
+  }
+
+}

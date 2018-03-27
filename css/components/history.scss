@@ -1,0 +1,79 @@
+$history-p-mobile: 22px;
+$history-p-tablet: 26px;
+$history-p-desktop: 26px;
+$contact-button-text: 22px;
+$history-h3: 28px;
+
+
+.history-container {
+  .history-content {
+    margin: 0 auto;
+    max-width: 930px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+
+    h3 {
+      font-size: $history-h3 * $font-mobile-multiplier;
+      margin-bottom: 50px;
+
+      @media (min-width: $breakpoint-small) {
+        font-size: $history-h3 * $font-small-multiplier;
+      }
+
+      @media (min-width: $breakpoint-medium) {
+        font-size: $history-h3;
+      }
+    }
+
+    .support-content {
+      width: 100%;
+
+      @media (min-width: $breakpoint-tablet) {
+        margin-left: auto;
+        width: 80%;
+      }
+    }
+
+    .paragraph {
+      font-weight: 300;
+      font-size: $history-p-mobile;
+      margin-bottom: 20px;
+      @media (min-width: $breakpoint-small) {
+        font-size: $history-p-tablet;
+      }
+
+      @media (min-width: $breakpoint-medium) {
+        font-size: $history-p-desktop;
+      }
+    }
+
+    .contact-button {
+      background: $brand-dark;
+      color: $white;
+      border: 1px solid $brand-dark-hover;
+      text-align: center;
+      padding: 20px 0;
+      line-height: .9;
+      font-weight: 300;
+      display: block;
+      width: 240px;
+      cursor: pointer;
+      transition: background .5s ease;
+      font-size: $contact-button-text * $font-mobile-multiplier;
+      
+
+      &:hover {
+        background: $brand-dark-hover;
+      }
+      
+      @media (min-width: $breakpoint-small) {
+        font-size: $contact-button-text * $font-small-multiplier;
+      }
+
+      @media (min-width: $breakpoint-medium) {
+        font-size: $contact-button-text;
+      }
+    }
+
+  }
+}

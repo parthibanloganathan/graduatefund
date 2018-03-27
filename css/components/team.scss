@@ -1,0 +1,68 @@
+$team-opening-h3-mobile: 22px;
+$team-opening-h3-tablet: 26px;
+$team-opening-h3-desktop: 26px;
+$team-opening-p-mobile: 22px;
+$team-opening-p-tablet: 26px;
+$team-opening-p-desktop: 26px;
+
+
+
+.team-container {
+  padding-bottom: 250px;
+
+ .team-content {
+    width: 100%;
+    position: relative;
+    max-width: 830px;
+    padding-top: 100px;
+    margin-left: auto;
+
+    @media (min-width: $breakpoint-tablet) {
+      padding-top: 175px;
+    }
+    
+
+   .opening  {
+      min-height: 125px;
+
+      h3 {
+        font-size: $team-opening-h3-mobile;
+        font-weight: 700;
+        font-style: normal;
+        @media (min-width: $breakpoint-small) {
+          font-size: $team-opening-h3-tablet;
+        }
+
+        @media (min-width: $breakpoint-medium) {
+          font-size: $team-opening-h3-desktop;
+        }
+      }
+
+      p {
+        font-size: $team-opening-p-mobile;
+        width: 100%;
+
+        @media (min-width: $breakpoint-small) {
+          font-size: $team-opening-p-tablet;
+          width: 85%;
+          max-width: 625px;
+        }
+
+        @media (min-width: $breakpoint-medium) {
+          font-size: $team-opening-p-desktop;
+        }
+      }
+    }
+
+    .team {
+      margin-top: 40px;
+
+      @media (min-width: $breakpoint-small) {
+        margin-top: 60px;
+      }
+
+
+      
+    }
+  } 
+}

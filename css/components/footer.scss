@@ -1,0 +1,19 @@
+.footer {
+  padding-bottom: 60px;
+  background: $white;
+  max-width: 1140px;
+  margin: 0 auto;
+
+  @media (min-width: $breakpoint-small) {
+    padding-bottom: 125px;
+  }
+
+  .copyright {
+    font-size: 13px;
+  }
+
+  a {
+    text-decoration: none;
+    border-bottom: none;
+  }
+}

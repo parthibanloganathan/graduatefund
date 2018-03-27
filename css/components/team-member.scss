@@ -1,0 +1,135 @@
+$team-member-header-h4-mobile: 18px;
+$team-member-header-h4-tablet: 22px;
+$team-member-header-h4-desktop: 22px;
+$team-member-header-h6-mobile: 14px;
+$team-member-header-h6-tablet: 18px;
+$team-member-header-h6-desktop: 18px;
+
+
+.team-member {
+  width: 90%;
+  margin: 5%;
+  position: relative;
+  cursor: pointer;
+
+  &:hover {
+    .team-member-picture {
+      box-shadow: 15px 25px 30px rgba(24, 39, 53, 0.60);
+      -moz-box-shadow: 15px 25px 30px rgba(24, 39, 53, 0.60);
+      -webkit-box-shadow: 15px 25px 30px rgba(24, 39, 53, 0.60);
+      -o-box-shadow: 15px 25px 30px rgba(24, 39, 53, 0.60);
+    }
+    .plus {
+      -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+      -o-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      transform: rotate(90deg);
+    }
+
+  }
+
+  .team-member-picture {
+    width: 100%;
+    display: block;
+    transition: box-shadow .5s ease;
+    box-shadow: 15px 25px 30px rgba(24, 39, 53, 0.30);
+    -moz-box-shadow: 15px 25px 30px rgba(24, 39, 53, 0.30);
+    -webkit-box-shadow: 15px 25px 30px rgba(24, 39, 53, 0.30);
+    -o-box-shadow: 15px 25px 30px rgba(24, 39, 53, 0.30);
+  }
+
+  .plus  {
+    position: absolute;
+    right: 20px;
+    width: 15px;
+    top: 20px;
+    transition: transform .5s ease;
+
+    @media (min-width: $breakpoint-medium) {
+      width: 17.5px;
+      right: 40px;
+      top: 40px;
+    }
+  }
+
+  .team-member-header {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    color: $white;
+
+    @media (min-width: $breakpoint-medium) {
+      bottom: 40px;
+      left: 40px;
+      right: 40px;
+    }
+
+    h4 {
+      font-weight: 600;
+      letter-spacing: .5px;
+      font-size: $team-member-header-h4-mobile;
+      @media (min-width: $breakpoint-small) {
+        font-size: $team-member-header-h4-tablet;
+      }
+
+      @media (min-width: $breakpoint-medium) {
+        font-size: $team-member-header-h4-desktop;
+      }
+    }
+
+    h6 {
+      font-weight: 300;
+      font-size: $team-member-header-h6-mobile;
+      margin-top: 5px;
+
+      @media (min-width: $breakpoint-small) {
+        font-size: $team-member-header-h6-tablet;
+      }
+
+      @media (min-width: $breakpoint-medium) {
+        font-size: $team-member-header-h6-desktop;
+      }
+    }
+
+
+  }
+
+  .team-member-biography-hidden {
+      display: none;
+  }
+
+  @media (min-width: $breakpoint-small) {
+    width: 49%;
+    margin: 2% 0 0 0;
+
+    &:nth-child(odd) {
+      float: right;
+    }
+
+    &:nth-child(even) {
+      float: left;
+    }
+
+    &:nth-child(4) {
+       float: left;
+     }
+
+    &:nth-child(5) {
+      float: right;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:nth-child(2) {
+      margin-top: 24%;
+    }
+
+    &:nth-child(4), &:nth-child(5) {
+      margin-top: 30%
+    }
+  }
+}

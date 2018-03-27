@@ -1,0 +1,251 @@
+.co-op-container {
+	width: 100%;
+	position: relative;
+	
+
+	.co-op {
+		padding: 150px 0 40px 0;
+		position: relative;
+		margin-top: 100px;
+
+		&:first-child {
+			margin-top: 50px;
+		}
+
+		&:last-child {
+			margin-bottom: 150px;
+		}
+
+
+		.bg-circle {
+			position: absolute;
+			width: 100%;
+		}
+
+		.bg-circle-mobile {
+			top: -5%;
+			display: block;
+			height: 90%;
+			@media (min-width: $breakpoint-tablet) {
+				display: none;
+			}
+
+		}
+
+		.bg-circle-desktop {
+			top: -2.5%;
+			display: none;
+			@media (min-width: $breakpoint-tablet) {
+				display: block;
+			}
+		}
+
+		
+
+		.co-op-image {
+			display: none;
+			position: absolute;
+			z-index: 2;
+			bottom: -$content-padding-desktop;
+			width: $content-size-mobile + ($content-padding-mobile *2);
+
+			img {
+				width: 100%;
+			}
+
+			@media (min-width: $breakpoint-small) {
+				display: block;
+			}
+
+			@media (min-width: $breakpoint-medium) {
+				width: $content-size-desktop + ($content-padding-desktop *2);
+			}
+
+			
+		}
+
+		.content {
+			position: relative;
+			z-index: 10;
+			background: $white;
+			padding: $content-padding-mobile;
+			width: $content-size-mobile;
+			height: $content-size-mobile;
+			box-shadow: 6.5px 11.3px 25px 0 rgba(24, 39, 53, 0.30);
+			-webkit-box-shadow: 6.5px 11.3px 25px 0 rgba(24, 39, 53, 0.30);
+			-o-box-shadow: 6.5px 11.3px 25px 0 rgba(24, 39, 53, 0.30);
+			-moz-box-shadow: 6.5px 11.3px 25px 0 rgba(24, 39, 53, 0.30);
+			margin: 0 auto;
+			cursor: pointer;
+			transition: box-shadow .5s ease;
+
+			&:hover {
+				box-shadow: 6.5px 11.3px 25px 0 rgba(24, 39, 53, 0.60);
+				-webkit-box-shadow: 6.5px 11.3px 25px 0 rgba(24, 39, 53, 0.60);
+				-o-box-shadow: 6.5px 11.3px 25px 0 rgba(24, 39, 53, 0.60);
+				-moz-box-shadow: 6.5px 11.3px 25px 0 rgba(24, 39, 53, 0.60);
+
+				.plus {
+				    -webkit-transform: rotate(90deg);
+				    -moz-transform: rotate(90deg);
+				    -o-transform: rotate(90deg);
+				    -ms-transform: rotate(90deg);
+				    transform: rotate(90deg);
+			    }
+			}
+
+			@media (min-width: $breakpoint-small) {
+				margin: 0;
+			}
+
+			h2 {
+				text-align: right;
+				font-size: 25px;
+				display: inline-block;
+				margin-bottom: 40px;
+				font-weight: 600;
+			}
+
+			p {
+				font-size: 20px;
+				margin-bottom: 40px;
+			}
+
+			.plus  {
+			    position: absolute;
+			    right: $content-padding-mobile;
+			    top: $content-padding-mobile;
+			    width: 15px;
+			    transition: transform .5s ease;
+
+			    @media (min-width: $breakpoint-medium) {
+			      width: 17.5px;
+			      right: $content-padding-desktop;
+			      top: $content-padding-desktop;
+			    }
+			}
+
+			.learn-more-btn {
+				padding: 15px 40px;
+				font-size: 13px;
+				color: $white;
+				display: inline-block;
+				border-bottom: none;
+				transition: background .5s ease;
+			}
+
+
+			@media (min-width: $breakpoint-tablet) {
+				padding: $content-padding-desktop;
+				width: $content-size-desktop;
+				height: $content-size-desktop;
+
+				h2 {
+					font-size: 30px;
+				}
+
+				p {
+					width: 90%;
+				}
+			}
+
+		}
+
+		.partners {
+			display: none;
+			font-size: 0px;
+			width: 80%;
+			margin: 30px 10% 0 10%;
+
+			@media (min-width: $breakpoint-tablet) {
+				margin-top: 50px;
+			}
+
+			.partner {
+				width: 33%;
+				display: inline-block;
+				vertical-align: middle;
+
+				img {
+					width: 60%;
+					display: block;
+					margin: 0 20%;
+				}
+			}
+		}
+	}
+
+	.co-op.product {
+
+		.bg-circle-desktop {
+			right: -5%;
+		}
+
+		.co-op-image {
+
+			left: 0;
+
+			@media (min-width: $breakpoint-medium) {
+				right: $content-size-desktop;
+				left: auto;
+			}
+		}
+		
+		.content {
+			color: $product-brand-dark;
+			@media (min-width: $breakpoint-small) {
+				margin-left: auto;
+			}
+		}
+
+		.learn-more-btn {
+			background: $product-brand-dark;
+
+		}
+
+		&:hover, &:focus {
+			.learn-more-btn {
+				background: $product-brand-dark-hover;
+			}
+		}
+		
+
+	}
+
+	.co-op.healthcare {
+
+		.bg-circle-desktop {
+			left: -5%;
+		}
+
+		.co-op-image {
+			right: 0;
+
+			@media (min-width: $breakpoint-medium) {
+				left: $content-size-desktop;
+				right: auto;
+			}
+		}
+
+
+		.content {
+			color: $healthcare-brand-dark;
+
+			.learn-more-btn {
+				background: $healthcare-brand-dark;
+
+			}
+
+			&:hover, &:focus {
+				.learn-more-btn {
+					background: $healthcare-brand-dark-hover;
+				}
+			}
+		}
+
+		
+		
+
+	}
+	
+}

@@ -1,0 +1,185 @@
+$market-h3-mobile: 20px;
+$market-h3-tablet: 24px;
+$market-h3-desktop: 28px;
+
+.market-background {
+  z-index: 200;
+  position: relative;
+}
+
+.markets-container {
+  z-index: 200;
+  position: relative;
+  padding-bottom: 75px;
+  padding-top: 50px;
+  overflow: hidden;
+  
+  @media (min-width: $breakpoint-small) {
+    padding-bottom: 150px;
+    padding-top: 75px;
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    padding-bottom: 230px;
+    padding-top: 115px;
+  }
+
+  .markets-content {
+    text-align: center;
+    width: 100%;  
+    color: $white;
+
+    h3 {
+      padding-bottom: 50px;
+      font-weight: 300;
+      font-size: $market-h3-mobile;
+      text-align: center;
+      max-width: 100%;
+
+      @media (min-width: $breakpoint-small) {
+        padding-bottom: 75px;
+        max-width: 100%;
+        margin: 0 auto;
+        font-size: $market-h3-tablet;
+      }
+
+      @media (min-width: $breakpoint-medium) {
+        max-width: 90%;
+        padding-bottom: 115px;
+        font-size: $market-h3-desktop;
+
+      }
+    }
+
+
+    .markets-grid {
+      max-width: 1125px;
+      margin: 0 auto;
+      position: relative;
+
+      h6 {
+        font-size: 60px;
+        text-transform: uppercase;
+        padding-bottom: 75px;
+        text-align: center;
+        line-height: .95;
+        pointer-events: none;
+
+        @media (min-width: $breakpoint-tablet) {
+          font-size: 100px;
+          z-index: 210;
+          padding-bottom: 0;
+          position: absolute;
+          top: 50%;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+          
+        }
+
+        @media (min-width: $breakpoint-medium) {
+          font-size: 150px;
+        }        
+
+        @media (min-width: $breakpoint-large) {
+          font-size: 200px;
+        }
+      }
+
+      .markets {
+        .market {
+          position: relative;
+          width: 100%;
+          display: block;
+          margin-bottom: 20px;
+
+          .market-background-image {
+            width: 100%;
+            cursor: pointer;
+          }
+          
+          @media (min-width: $breakpoint-tablet) {
+            width: 48%;
+            display: inline-block;
+            margin-bottom: 0;
+
+            .market-background-image:hover + .market-info.closed-market > .dot, .market-info.closed-market:hover > .dot,  {
+              -webkit-transform: scale3d(1.25, 1.25, 1.25);
+              -moz-transform: scale3d(1.25, 1.25, 1.25);
+              -o-transform: scale3d(1.25, 1.25, 1.25);
+              -ms-transform: scale3d(1.25, 1.25, 1.25);
+              transform: scale3d(1.25, 1.25, 1.25);
+            }
+            
+
+            &:nth-child(even) {
+              text-align: left;
+              margin-left: 2%;
+            }
+
+            &:nth-child(odd) {
+              text-align: right;
+            }
+
+            &:nth-child(1), &:nth-child(2) {
+              margin-bottom: 2%;
+            } 
+
+            &:nth-child(3) {
+              .market-background-image {
+                width: 90%;
+              }
+            }
+
+            &:nth-child(4) {
+              .market-background-image {
+                width: 77%;
+              }
+            }
+
+            &:nth-child(1) {
+              .market-info {
+                top: 80px;
+                left: 190px;
+
+                @media (min-width: $breakpoint-medium) {
+                  left: 240px;
+                }
+              }
+            }
+
+            &:nth-child(2) {
+              .market-info {
+                top: 210px;
+                left: 20px;
+
+                @media (min-width: $breakpoint-medium) {
+                  left: 45px;
+                }
+              }
+            }
+
+            &:nth-child(3) {
+              .market-info {
+                top: auto;
+                bottom: 150px;
+                left: 115px;
+              }
+            }
+            
+
+            &:nth-child(4) {
+              vertical-align: top;
+              .market-info {
+                bottom: 120px;
+                top: auto;
+                left: 20px;
+              }
+            }
+          }
+        }
+      }
+    }  
+  }
+  
+}

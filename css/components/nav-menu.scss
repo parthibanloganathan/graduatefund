@@ -1,0 +1,118 @@
+#side-navigation {
+  position: fixed;
+  top: 35px; 
+  right: ($border-width-mobile + 5);
+  z-index: 999;
+  transition: right .5s;
+
+  @media (min-width: $breakpoint-small) {
+    top: 95px;
+    right: ($border-width-small);
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    top: 125px;
+    right: ($border-width-medium);
+  }
+
+  #navigation-menu {
+    display: none;
+    margin-top: 30px;
+    padding-left: 0;
+    list-style-type: none;
+
+    .menu-item {
+      text-align: right;
+      opacity: 0;
+      cursor: pointer;
+      margin: 10px 0;
+      transition: opacity .5s;      
+      padding-right: 10px;
+      list-style-type: none;
+      color: $brand-dark-hover;
+
+      a {
+        text-decoration: none;
+        color: $brand-dark-hover;
+        font-size: 16px;
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+#side-navigation.pre-scroll {
+  top: 100px; 
+  right: ($border-width-small + 35);
+  position: absolute;
+
+  @media (min-width: $breakpoint-small) {
+    right: 100px;
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    right: 150px;
+  }
+
+  @media (min-width: $breakpoint-large) {
+    right: 225px;
+  }
+
+  @media (min-width: 1350px) {
+    right: 15%;
+  }
+
+  @media (min-width: 1550px) {
+    right: 20%;
+  }
+
+  @media (min-width: 1750px) {
+    right: 25%;
+  }
+
+  @media (min-width: 2000px) {
+    right: 30%;
+  }
+}
+
+#side-navigation.pre-scroll.open {
+  top: 50px;
+}
+
+
+#side-navigation.open {
+  background: $white;
+  padding: 100px 80px; 
+  padding-right: $border-width-mobile;
+  border-bottom-left-radius: 1000px;
+  border-top-left-radius: 1000px;
+  top: 0;
+  right: 0;
+  box-shadow: 15px 26px 30px 0px rgba(24, 39, 53, 0.3); 
+  -moz-box-shadow: 15px 26px 30px 0px rgba(24, 39, 53, 0.3); 
+  -webkit-box-shadow: 15px 26px 30px 0px rgba(24, 39, 53, 0.3); 
+  -o-box-shadow: 15px 26px 30px 0px rgba(24, 39, 53, 0.3); 
+
+  @media (min-width: $breakpoint-small) {
+    padding-right: ($border-width-small);
+    top: 20px;
+  }
+
+  @media (min-width: $breakpoint-medium) {
+    padding-right: ($border-width-medium);
+  }
+
+  #navigation-menu {
+    display: block;
+  }
+
+  #navigation-menu {
+    .menu-item {
+      opacity: 1;
+    }
+  }
+}
+
+h3{
+  font-weight: 900 !important;
+}

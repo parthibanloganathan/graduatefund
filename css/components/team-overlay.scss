@@ -1,0 +1,204 @@
+$team-member-bio-header-h4: 32px;
+$team-member-bio-header-h6: 18px;
+$team-member-bio-opening: 22px;
+$team-member-bio-p: 18px;
+$team-member-bio-mobile-perc: .75;
+
+
+
+#team-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: $white;
+  opacity: 0;
+  z-index: -1;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  -moz-overflow-scrolling: touch;
+
+  .team-member-overlay-dots {
+    top: 0;
+    left: 0;
+    right: 50%;
+    bottom: 50%;
+    position: absolute;
+    z-index: 10;
+    background-image: url('../img/team/bio-dots.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+  }
+
+  #team-overlay-member {
+    position: absolute;
+    z-index: 100;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-top: 5%;
+    padding-bottom: 30px;
+
+    @media (min-width: $breakpoint-medium) {
+      margin-top: 10%;
+      width: 80%;
+      margin-left: 10%;
+    }
+
+    .team-member-picture {
+      display: none;
+      box-shadow: 15px 25px 30px rgba(24, 39, 53, 0.60);
+      -moz-box-shadow: 15px 25px 30px rgba(24, 39, 53, 0.60);
+      -webkit-box-shadow: 15px 25px 30px rgba(24, 39, 53, 0.60); 
+      -o-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.10); 
+
+      @media (min-width: $breakpoint-medium) {
+        margin: 0;
+        display: block;  
+        width: 40%;
+      }
+    }
+
+    .team-member-close {
+      height: 65px;
+      width: 65px;
+      background: $white;
+      box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      border: .5px solid rgba(0, 0, 0, 0.005);
+      border-radius: 200px;
+      transition: box-shadow 1s ease;
+      margin-left: auto;
+      position: absolute;
+      top: -10px;
+      right: 10px;
+
+      img {
+        width: 15px;
+        height: 15px;
+        margin-top: 25px;
+        margin-left: 25px;
+      }
+
+      @media (min-width: $breakpoint-medium) {
+        height: 100px;
+        width: 100px;
+        top: -50px;
+
+        img {
+          width: 20px;
+          height: 20px;
+          margin-top: 40px;
+          margin-left: 40px;
+        }
+
+      }
+
+      
+      &:hover {
+        box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.3);        
+      }
+    }
+
+    .team-member-biography {
+      width: 90%;
+      left: 5%;
+      margin-top: 15%;
+      background: transparent;
+      position: relative;
+
+      @media (min-width: $breakpoint-medium) {
+        width: 50%;
+        left: 50%;
+        margin-top: 5%;
+        position: absolute;
+         top: 0;
+      }
+
+      .biography-header {
+        margin-top: 40px;
+        text-align: center;
+
+        h4 {
+          font-weight: 700;
+          font-size: $team-member-bio-header-h4;
+
+
+          @media (min-width: $breakpoint-small) {
+            font-size: $team-member-bio-header-h4;
+          }
+        }
+
+        h6 {
+          margin-top: 10px;
+          font-weight: 300;
+          font-size: $team-member-bio-header-h6;
+
+          @media (min-width: $breakpoint-small) {
+            font-size: $team-member-bio-header-h6;
+          }
+        }
+      }
+
+      .biography-open {
+        margin-top: 20px;
+        text-align: left;
+        p {
+          font-size: $team-member-bio-opening;
+
+          @media (min-width: $breakpoint-small) {
+            font-size: $team-member-bio-opening;
+          }
+        }
+      }
+
+      .biography-detail {
+        margin-top: 10px;
+        text-align: left;
+
+        p {
+          font-size: $team-member-bio-p;
+          margin-bottom: 10px;
+
+          @media (min-width: $breakpoint-small) {
+            font-size: $team-member-bio-p;
+          }
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+        
+      }
+
+      .biography-social {
+        margin-top: 20px;
+        text-align: center;
+        .social-link {
+          border-bottom: none;
+          height: 20px;
+          width: 20px;
+          display: inline-block;
+
+          img {
+            width: 100%;
+          }
+
+          &:first-child {
+            margin-right: 20px;
+          }
+        }
+      }
+      
+    }
+
+    .team-member-biography, .team-member-close, .biography-header, .biography-open, .biography-detail {
+        opacity: 1;
+    }
+  
+
+    
+  }
+}
