@@ -50,10 +50,8 @@ var frcCoop = {
       var targetMemberHeader = $(targetEl.closest('.team-member')).children('.team-member-header');
       var targetMember = $(targetEl.closest('.team-member'));
       var targetHash = '#' + targetMember.attr('id');
-
       $('body,html').css('overflow', 'hidden');
       $('#team-overlay').css('z-index', '1000').css('display', 'block').animate({opacity:1}, 300);
-
 
 
       $('#team-overlay-member').children('.team-member-picture').attr('src', $(targetMember).children('.team-member-picture').attr('src'));
@@ -98,7 +96,7 @@ var frcCoop = {
   },
 
   watchTeamHash: function() {
-    var teamMemberIDHashes = ["#team-nikita-dyer", "#team-zander-pease", "#team-olivia-teich", "#team-dan-shipper", "#team-max-mullen", "#team-paul-rosania"];
+    var teamMemberIDHashes = ["#team-anjney-midha", "#team-bruno-faviero", "#team-lauren-reeder", "#team-neal-khosla", "#team-parthi-loganathan"];
     if (teamMemberIDHashes.indexOf(window.location.hash) !== -1) {
       $('#white-coverup').show();
       var targetTeamMember = $(window.location.hash);
