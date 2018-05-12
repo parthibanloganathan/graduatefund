@@ -215,6 +215,8 @@ body h1, body h2, body h3, body h4, body h5, body h6, body p {
 .main-container .dots-background {
   position: absolute;
   margin-top: 425px;
+  max-height: 1500px;
+  overflow: hidden;
   right: 10px;
   left: 10px;
 }
